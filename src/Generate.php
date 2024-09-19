@@ -18,7 +18,7 @@ class Generate
         $this->size = $size;
         $this->backgroundColor = $backgroundColor;
         $this->textColor = $textColor;
-        $this->fontPath = __DIR__ . '/fonts/OpenSans-Bold.ttf'; // Update with the actual path to your font
+        $this->fontPath = __DIR__ . '/fonts/OpenSans-Bold.ttf';
     }
 
     /**
