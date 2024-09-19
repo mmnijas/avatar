@@ -1,0 +1,21 @@
+{
+    "name": "mmnijas/avatar",
+    "description": "Avatar Generator is a lightweight PHP package designed to generate avatars based on user names. It offers two flexible modes for avatar generation, letter based avatar and random image avatar",
+    "type": "library",
+    "require": {
+        "intervention/image": "^3.8"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mmnijas\\Avatar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nijas M M",
+            "email": "mmnijas@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
