@@ -45,16 +45,20 @@ class Generate
     {
         $initials = $this->getInitials($this->name);
 
-        // Create a blank canvas
-        $image = Image::canvas($this->size, $this->size, $this->backgroundColor);
+        // Load bg
+        $bgImage = 'backgrounds/' . rand(1, 12) . '.jpg';
+        $image = Image::make($bgImage); // Use the path to your image
+
+        // Resize the image if necessary to the desired size
+        $image->resize($this->size, $this->size);
 
         // Add the initials as text
         $image->text($initials, $this->size / 2, $this->size / 2, function ($font) {
-            $font->file($this->fontPath);
-            $font->size($this->size / 2);
-            $font->color($this->textColor);
-            $font->align('center');
-            $font->valign('middle');
+            $font->file($this->fontPath); // Use custom TTF font
+            $font->size($this->size / 2); // Adjust font size relative to image size
+            $font->color($this->textColor); // Font color
+            $font->align('center'); // Align text horizontally in the center
+            $font->valign('middle'); // Align text vertically in the center
         });
 
         return $image;
