@@ -116,6 +116,18 @@ Here’s a complete example of how to set everything up:
    />
    ```
 
+   ```html
+   <img
+     src="{{ route('avatar', [
+           'name' => 'Nijas M M',
+           'size' => 200,
+           'bg' => '#3498db',
+           'color' => '#ffffff'
+           ]) }}"
+     alt="Avatar"
+   />
+   ```
+
 ## License
 
 This package is open-source software licensed under the MIT License.
@@ -131,3 +143,9 @@ Thanks to the [Intervention Image](http://image.intervention.io/) library for pr
 ```
 
 ```
+
+    composer require mmnijas/avatar
+
+use App\Http\Controllers\TestController;
+
+Route::get('/avatar', [TestController::class, 'generateAvatar'])->name('avatar');
